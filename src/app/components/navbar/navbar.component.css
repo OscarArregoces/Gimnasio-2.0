@@ -1,0 +1,21 @@
+
+a{
+    font-family: 'DM Serif Text', serif;
+}
+
+.flex-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    font-size: 25px;
+}
+
+nav{
+    border-bottom: 1px solid rgba(146, 146, 146, 0.418);
+}
+
+
+a,i{
+    cursor: pointer;
+}

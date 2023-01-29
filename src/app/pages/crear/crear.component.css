@@ -1,0 +1,12 @@
+form button {
+    width: 100%;
+}
+
+.ejercicios{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ejercicios div{
+    margin: auto;
+}

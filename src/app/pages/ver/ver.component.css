@@ -1,0 +1,20 @@
+.ejercicios{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+button{
+    width: 100%;
+}
+
+
+.ejercicios div{
+    margin: auto;
+}
+
+/* DESPUES DED 800px QUITA EL MARGIN */
+@media (min-width:800px) {
+    .ejercicios div{
+        margin: 0;
+    }
+}

@@ -1,0 +1,37 @@
+/* .card {
+    max-width: 290px;
+    max-height: 150px;
+} */
+
+.new i {
+    font-size: 100px;
+    cursor: pointer;
+}
+
+.new{
+    text-align: center;
+    margin: auto;
+}
+
+.caja-principal{
+    display: flex;
+    flex-wrap: wrap;
+}
+h5{
+    text-align: center;
+    margin: auto;
+}
+
+
+/* .card button {
+    width: 70%;
+    margin: auto;
+} */
+
+
+
+/* @media (min-width:800px) {
+    .new{
+        margin: 0;
+    }
+} */

@@ -1,0 +1,14 @@
+<div class="card-exercie col-lg-3 mx-4 my-2">
+    <h6>{{data.item.name}}</h6>
+    <!-- <img src="../../../assets/image_jercicios/abdomen/1.jpg" class="card-img-top"> -->
+    <img [src]="src" class="card-img-top">
+    <!-- <button id="btn" (click)="addExercie(data.item)" class="btn btn-dark">Agregar</button> -->
+    <div class="btns">
+        <button (click)="addExercie(data.item)" type="button" class="btn btn-outline-success" [disabled]="banderaAdd">
+            <i class="fa-solid fa-cart-plus"></i>
+        </button>
+        <button (click)="addExercie(data.item)" type="button" class="btn btn-outline-danger" [disabled]="banderaDelete">
+            <i class="fa-solid fa-trash"></i>
+        </button>
+    </div>
+</div>

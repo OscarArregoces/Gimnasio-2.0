@@ -1,0 +1,26 @@
+
+.card-exercie{
+    border: 1px solid rgba(173, 171, 171, 0.678);
+    padding: 15px;
+    width: 250px;
+    max-height: 350px;
+    /* height: 300px; */
+    /* align-items: center; */
+    /* max-width: 250px;  */
+    /* max-height: 300px; */
+}
+
+.card-exercie h6,img,button{
+    margin: 10px 0 10px 0;
+    text-align: center;
+}
+
+button{
+    width: 20%;
+}
+
+.btns{
+    display: flex;
+   justify-content: space-evenly;
+}
+

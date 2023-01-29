@@ -1,0 +1,92 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 ">
+            <form class="p-3" [formGroup]="formsValue" (ngSubmit)="saveRutine()">
+                <input type="email" placeholder="Titulo/Nombre" class="form-control mb-3 " formControlName="titulo" maxlength="30">
+                <select class="form-select mb-3" aria-label="Default select example" formControlName="dia">
+                    <option value="" selected="selected">Seleccione un dia</option>
+                    <option value="Lunes">Lunes</option>
+                    <option value="Martes">Martes</option>
+                    <option value="Miercoles">Miercoles</option>
+                    <option value="Jueves">Jueves</option>
+                    <option value="Viernes">Viernes</option>
+                    <option value="Sabado">Sabado</option>
+                    <option value="Domingo">Domingo</option>
+                </select>
+
+                <button type="submit" class="btn btn-success mb-3">Guardar</button>
+            </form>
+        </div>
+        <div class="col-6 p-5"></div>
+    </div>
+    <div class="row">
+        <div class="col-12 p-3">
+            <select class="form-select" aria-label="Default select example" [(ngModel)]="ejercicio_actual">
+                <option value="ninguno" selected="selected">Selecciona un ejercicio</option>
+                <option value="abdomen">Abdomen</option>
+                <option value="biceps">Biceps</option>
+                <option value="espalda">Espalda</option>
+                <option value="hombros">Hombros</option>
+                <option value="pectoral">Pectoral</option>
+                <option value="piernas">Piernas</option>
+                <option value="trapesio">Trapesio</option>
+                <option value="triceps">Triceps</option>
+            </select>
+        </div>
+    </div>
+
+    <div *ngIf="ejercicio_actual !='ninguno' ">
+
+        <container-element [ngSwitch]="ejercicio_actual">
+
+            <section class="ejercicios" *ngSwitchCase="'abdomen'">
+                <div *ngFor="let item of exercie_service.abdomen; index as i">
+                    <app-card-exercie [data]={item}></app-card-exercie>
+                </div>
+            </section>
+
+            <section class="ejercicios" *ngSwitchCase="'biceps'">
+                <div *ngFor="let item of exercie_service.biceps; index as i">
+                    <app-card-exercie [data]={item}></app-card-exercie>
+                </div>
+            </section>
+
+            <section class="ejercicios" *ngSwitchCase="'espalda'">
+                <div *ngFor="let item of exercie_service.espalda; index as i">
+                    <app-card-exercie [data]={item}></app-card-exercie>
+                </div>
+            </section>
+
+            <section class="ejercicios" *ngSwitchCase="'hombros'">
+                <div *ngFor="let item of exercie_service.hombros; index as i">
+                    <app-card-exercie [data]={item}></app-card-exercie>
+                </div>
+            </section>
+
+            <section class="ejercicios" *ngSwitchCase="'pectoral'">
+                <div *ngFor="let item of exercie_service.pectoral; index as i">
+                    <app-card-exercie [data]={item}></app-card-exercie>
+                </div>
+            </section>
+
+            <section class="ejercicios" *ngSwitchCase="'piernas'">
+                <div *ngFor="let item of exercie_service.piernas; index as i">
+                    <app-card-exercie [data]={item}></app-card-exercie>
+                </div>
+            </section>
+
+            <section class="ejercicios" *ngSwitchCase="'trapesio'">
+                <div *ngFor="let item of exercie_service.trapesio; index as i">
+                    <app-card-exercie [data]={item}></app-card-exercie>
+                </div>
+            </section>
+
+            <section class="ejercicios" *ngSwitchCase="'triceps'">
+                <div *ngFor="let item of exercie_service.triceps; index as i">
+                    <app-card-exercie [data]={item}></app-card-exercie>
+                </div>
+            </section>
+            <!-- <some-element *ngSwitchDefault>...</some-element> -->
+        </container-element>
+    </div>
+</div>

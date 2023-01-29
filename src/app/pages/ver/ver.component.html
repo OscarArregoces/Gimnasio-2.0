@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-6">
+            <label>Titulo:</label>
+            <input type="email" [value]="Titulo" class="form-control mb-3 " maxlength="15" disabled> 
+            <label>Dia:</label>
+            <input type="email" [value]="Dia" class="form-control mb-3 " maxlength="15"  disabled>
+            <button class="btn btn-primary">Imprimir</button>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-12 ejercicios">
+            <div *ngFor="let item of saved.ejercicios; index as i">
+                <app-card [data]="item"></app-card>
+            </div>
+        </div>
+    </div>
+</div>

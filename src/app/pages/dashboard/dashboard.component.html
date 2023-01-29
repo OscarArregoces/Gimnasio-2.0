@@ -1,0 +1,23 @@
+<div class="container my-3">
+    <!-- Crear nueva rutina -->
+    <div class="new col-md-3" routerLink="crear-rutina">
+        <i class="fa-solid fa-square-plus "></i>
+        <h5>Nuevo</h5>
+    </div>
+</div>
+
+
+<div class="container caja-principal">
+
+    <!-- Presave -->
+
+    <!-- <div class="new col-md-3" *ngIf="presave.length">
+        <app-card-rutine></app-card-rutine>
+    </div> -->
+
+    <!-- Rutinas guardadas -->
+
+    <div class="new col-md-3" *ngFor="let item of saved; index as i">
+        <app-card-rutine [data]={item} [index]={i}></app-card-rutine>
+    </div>
+</div>
